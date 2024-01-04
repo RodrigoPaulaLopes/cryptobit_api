@@ -1,9 +1,8 @@
-import { Router, type Request, type Response } from 'express'
+import { Router } from 'express'
 
+import coinsgecko_controller from '../controller/coinsgecko_controller'
 const router = Router()
 
-router.get('/coins/list', (req: Request, res: Response) => {
-  res.status(200).json({ data: 'test' })
-})
+router.get('/coins/list', coinsgecko_controller.getCoinsList)
 
 export default router
