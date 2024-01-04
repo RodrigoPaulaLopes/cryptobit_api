@@ -5,6 +5,6 @@ describe('Teste All Methods from Coins Router', () => {
     const res = (await request(app).get('/api/coins/list'))
 
     expect(res.statusCode).toBe(200)
-    expect(res.body).toBe({ message: 'data' })
+    expect(res.body).toEqual({ data: 'test' })
   })
 })
